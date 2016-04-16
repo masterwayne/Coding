@@ -5,7 +5,7 @@
 <div class="increase-height">
 <form method="post" action="/run/" id="editorid" class="editor-form">
 	{% csrf_token %}
-    <textarea name="code" rows="17" cols="4" form ="editorid" class="form-control" placeholder="Write Code here ..."></textarea>
+    <textarea name="code" rows="17" cols="4" form ="editorid" class="form-control" placeholder={{ code }}></textarea>
     <<div class="wrap">
     <div>
     Select Language  <input list="language" name="language" class="compile-button">
@@ -29,5 +29,15 @@
   </div>
 </div>
 </form>
+<div>
+  Compilation Log
+  {% for dt in data  %}
+<p>Compile Status: {{ dt.compile_status }}</p>
+</p>Memory Used : {{ dt.memory_used }}</p>
+<p>Time Used :{{ dt.memory_used }}</p>
+<p>Status    : {{ dt.status }}</p>
+<p>Output : {{ dt.output_html }}</p>
+{% endfor %}
+</div>
 </div>
 {% endblock %}

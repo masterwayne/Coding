@@ -158,6 +158,6 @@ def run(request):
         userData['memory_used']=jsonList[0]['run_status']['memory_used']
         userData['output_html']=jsonList[0]['run_status']['output_html']
         parsedData.append(userData)
-        return HttpResponse(parsedData)
+        return render(request,'nittutorial/compile_editor.html',{'data':parsedData,'code':code})
 def home(request):
     return render(request,'nittutorial/index.html')
