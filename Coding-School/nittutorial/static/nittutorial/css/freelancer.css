@@ -5,6 +5,18 @@
  */
  /* make sidebar nav vertical */ 
 @media (min-width: 768px) {
+    #submitform{
+        margin-top: 2%;
+        margin-left:35%;
+    }
+    .newpost{
+        color:#fff;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    margin-left: 25%;
+    margin-top: -5%;
+    }
     .editor{
         height:40%;
     }

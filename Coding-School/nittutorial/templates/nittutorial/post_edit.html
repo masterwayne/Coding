@@ -1,8 +1,12 @@
 {% extends 'nittutorial/index.html' %}
+{% load staticfiles %}
+{% load mkrange %}
+{% load bootstrap %}
 {% block content %}
-    <h1>New post</h1>
+    <p class="newpost">Enter the Data</p>
     <form method="POST">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">SUBMIT</button>
+        {{ form|bootstrap_horizontal:'col-lg-4' }}
+        <br><br>
+        <button type="submit" class="save btn btn-default" id="submitform">SUBMIT</button>
     </form>
 {% endblock %}
